@@ -2,6 +2,9 @@
 using UnityEngine;
 
 
+[RequireComponent(typeof(ActivationAndDeactivationManager))]
+[RequireComponent(typeof(Button))]
+
 public class ResponsiveToClick : MonoBehaviour
 {
     private ActivationAndDeactivationManager _manager;
