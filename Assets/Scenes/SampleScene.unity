@@ -135,6 +135,8 @@ GameObject:
   - component: {fileID: 261475971}
   - component: {fileID: 261475970}
   - component: {fileID: 261475969}
+  - component: {fileID: 261475973}
+  - component: {fileID: 261475972}
   m_Layer: 5
   m_Name: Resume
   m_TagString: Untagged
@@ -211,6 +213,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 261475967}
   m_CullTransparentMesh: 1
+--- !u!114 &261475972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261475967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df79d0aa1a248524a941ef0ae30581f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &261475973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261475967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61907f14d132a624199838bd31e45b90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectsToActivate:
+  - {fileID: 864623539}
+  - {fileID: 1138793016}
+  - {fileID: 1741142376}
+  - {fileID: 531995720}
+  - {fileID: 2099882583}
+  - {fileID: 1122906064}
+  - {fileID: 609775075}
+  - {fileID: 1856131057}
+  _objectsToDeactivate:
+  - {fileID: 261475967}
 --- !u!1 &373923418
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,6 +357,8 @@ MonoBehaviour:
   - {fileID: 2099882583}
   - {fileID: 1122906064}
   - {fileID: 864623539}
+  - {fileID: 1856131057}
+  - {fileID: 609775075}
   _objectsToDeactivate:
   - {fileID: 1534964681}
   - {fileID: 373923418}
@@ -510,7 +549,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &609775076
 RectTransform:
   m_ObjectHideFlags: 0
@@ -584,8 +623,10 @@ GameObject:
   - component: {fileID: 778563444}
   - component: {fileID: 778563443}
   - component: {fileID: 778563445}
+  - component: {fileID: 778563447}
+  - component: {fileID: 778563446}
   m_Layer: 5
-  m_Name: SoundOn
+  m_Name: MuteOff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -660,6 +701,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b264ecebea5b8f44bc774c047e8f87e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &778563446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778563441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df79d0aa1a248524a941ef0ae30581f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &778563447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778563441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61907f14d132a624199838bd31e45b90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectsToActivate:
+  - {fileID: 2035931599}
+  _objectsToDeactivate:
+  - {fileID: 778563441}
 --- !u!1 &795658466
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,6 +843,8 @@ GameObject:
   - component: {fileID: 864623542}
   - component: {fileID: 864623541}
   - component: {fileID: 864623543}
+  - component: {fileID: 864623545}
+  - component: {fileID: 864623544}
   m_Layer: 5
   m_Name: Pause
   m_TagString: Untagged
@@ -850,6 +921,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b264ecebea5b8f44bc774c047e8f87e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &864623544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864623539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df79d0aa1a248524a941ef0ae30581f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &864623545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864623539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61907f14d132a624199838bd31e45b90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectsToActivate:
+  - {fileID: 261475967}
+  _objectsToDeactivate:
+  - {fileID: 864623539}
+  - {fileID: 1138793016}
+  - {fileID: 1741142376}
+  - {fileID: 531995720}
+  - {fileID: 2099882583}
+  - {fileID: 1122906064}
+  - {fileID: 609775075}
+  - {fileID: 1856131057}
 --- !u!1 &1122906064
 GameObject:
   m_ObjectHideFlags: 0
@@ -1269,7 +1375,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1856131058
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1313,8 +1419,10 @@ GameObject:
   - component: {fileID: 2035931603}
   - component: {fileID: 2035931602}
   - component: {fileID: 2035931601}
+  - component: {fileID: 2035931605}
+  - component: {fileID: 2035931604}
   m_Layer: 5
-  m_Name: SoundOff
+  m_Name: MuteOn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1389,6 +1497,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2035931599}
   m_CullTransparentMesh: 1
+--- !u!114 &2035931604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035931599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df79d0aa1a248524a941ef0ae30581f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2035931605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035931599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61907f14d132a624199838bd31e45b90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectsToActivate:
+  - {fileID: 778563441}
+  _objectsToDeactivate:
+  - {fileID: 2035931599}
 --- !u!1 &2099882583
 GameObject:
   m_ObjectHideFlags: 0
