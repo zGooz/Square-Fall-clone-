@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField]
-    private readonly float _speed = 2.5f;
+    [SerializeField] private Handler _handler;
+    [SerializeField] private readonly float _speed = 2.5f;
 
     private Transform _transform;
     private int _direction = 0;
@@ -15,6 +15,16 @@ public class Movement : MonoBehaviour
     private void Awake()
     {
         _transform = GetComponent<Transform>();
+    }
+
+    private void OnEnable()
+    {
+        _handler.Reverce += OnRunOrReverce;
+    }
+
+    private void OnDisable()
+    {
+        _handler.Reverce -= OnRunOrReverce;
     }
 
     private void Update()
@@ -31,5 +41,10 @@ public class Movement : MonoBehaviour
         {
             _direction *= -1;
         }
+    }
+
+    private void OnRunOrReverce()
+    {
+        _direction = (_direction == 0) ? 1 : _direction * -1;
     }
 }

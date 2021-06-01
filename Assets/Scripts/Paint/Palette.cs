@@ -10,6 +10,15 @@ public class Palette : MonoBehaviour
 
     [SerializeField] private Donor _donor;
 
+    private void Awake()
+    {
+        if (_donor == null)
+        {
+            // This is for prefabs
+            _donor = GameObject.FindObjectOfType<Donor>();
+        }
+    }
+
     private void OnEnable()
     {
         _donor.ToGiveBonus += MakeColor;
