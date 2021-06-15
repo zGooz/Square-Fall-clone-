@@ -10,7 +10,7 @@ public class Keeper : MonoBehaviour
     public event UnityAction Keep;
     public event UnityAction Fail;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         var other = collision.gameObject;
 

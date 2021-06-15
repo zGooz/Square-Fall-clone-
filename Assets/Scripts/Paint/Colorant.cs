@@ -12,17 +12,23 @@ public class Colorant : MonoBehaviour
 
     private void Awake()
     {
+        if (_palette == null)
+        {
+            // This is for the prefabs.
+            _palette = GameObject.FindObjectOfType<Palette>();
+        }
+
         _renderer = GetComponent<SpriteRenderer>();
     }
 
     private void OnEnable()
     {
-        _palette.ColorSeted += Paint;
+        _palette.ColorSet += Paint;
     }
 
     private void OnDisable()
     {
-        _palette.ColorSeted -= Paint;
+        _palette.ColorSet -= Paint;
     }
 
     private void Paint()

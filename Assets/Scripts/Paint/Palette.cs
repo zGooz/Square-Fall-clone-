@@ -6,18 +6,9 @@ using UnityEngine.Events;
 public class Palette : MonoBehaviour
 {
     public Color Color { get; private set; } = Color.white;
-    public event UnityAction ColorSeted; // TODO: rename
+    public event UnityAction ColorSet;
 
     [SerializeField] private Donor _donor;
-
-    private void Awake()
-    {
-        if (_donor == null)
-        {
-            // This is for prefabs
-            _donor = GameObject.FindObjectOfType<Donor>();
-        }
-    }
 
     private void OnEnable()
     {
@@ -36,6 +27,6 @@ public class Palette : MonoBehaviour
         var b = Random.Range(0, 1);
 
         Color = new Color(r, g, b, 1);
-        ColorSeted?.Invoke();
+        ColorSet?.Invoke();
     }
 }
