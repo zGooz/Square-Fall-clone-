@@ -45,6 +45,6 @@ public class Movement : MonoBehaviour
 
     private void OnRunOrReverce()
     {
-        _direction = (_direction == 0) ? 1 : _direction * -1;
+        _direction = (_direction == 0) ? 1 : -_direction;
     }
 }

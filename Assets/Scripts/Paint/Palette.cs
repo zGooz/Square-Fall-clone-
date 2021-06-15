@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class Palette : MonoBehaviour
 {
     public Color Color { get; private set; } = Color.white;
-    public event UnityAction ColorSeted; // TODO : rename
+    public event UnityAction ColorSeted; // TODO: rename
 
     [SerializeField] private Donor _donor;
 

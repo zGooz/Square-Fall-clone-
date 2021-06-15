@@ -8,6 +8,7 @@ using UnityEngine.Events;
 public class Keeper : MonoBehaviour
 {
     public event UnityAction Keep;
+    public event UnityAction Fail;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -20,7 +21,9 @@ public class Keeper : MonoBehaviour
 
         if (other.TryGetComponent(out Square _))
         {
-            Destroy(other);
+            Fail?.Invoke();
         }
+
+        Destroy(other);
     }
 }
