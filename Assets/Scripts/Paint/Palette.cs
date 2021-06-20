@@ -12,19 +12,19 @@ public class Palette : MonoBehaviour
 
     private void OnEnable()
     {
-        _donor.ToGiveBonus += MakeColor;
+        _donor.ToSpawnBonus += MakeColor;
     }
 
     private void OnDisable()
     {
-        _donor.ToGiveBonus -= MakeColor;
+        _donor.ToSpawnBonus -= MakeColor;
     }
 
     private void MakeColor()
     {
-        var r = Random.Range(0, 1);
-        var g = Random.Range(0, 1);
-        var b = Random.Range(0, 1);
+        var r = Random.Range(0.0f, 1.0f);
+        var g = Random.Range(0.0f, 1.0f);
+        var b = Random.Range(0.0f, 1.0f);
 
         Color = new Color(r, g, b, 1);
         ColorSet?.Invoke();

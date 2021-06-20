@@ -33,6 +33,12 @@ public class Colorant : MonoBehaviour
 
     private void Paint()
     {
-        _renderer.color = _palette.Color;
+        var isBonus = gameObject.TryGetComponent<Bonus>(out Bonus _);
+        var isPlayer = gameObject.TryGetComponent<Player>(out Player _);
+
+        if (isBonus || isPlayer)
+        {
+            _renderer.color = _palette.Color;
+        }
     }
 }

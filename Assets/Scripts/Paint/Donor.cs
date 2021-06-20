@@ -1,37 +1,35 @@
 
-using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
 
 public class Donor : MonoBehaviour 
 {
-    public event UnityAction ToGiveBonus;
+    public event UnityAction ToSpawnBonus;
+
+    private const int MAX_TICK = 10;
 
     [SerializeField] private Spawner _spawner;
-    [SerializeField, Min(1)] private int _tickCount;
-    private float _time;
-
-    private void Awake()
-    {
-        _time = _spawner.Delay * _tickCount;
-    }
+    [SerializeField, Range(1, MAX_TICK)] private int _tickCount;
 
     private void OnEnable()
     {
-        StopCoroutine(Alarm());
-        StartCoroutine(Alarm());
+        _spawner.ToGiveSquare += DecrementTicks;
     }
 
     private void OnDisable()
     {
-        StopCoroutine(Alarm());
+        _spawner.ToGiveSquare -= DecrementTicks;
     }
 
-    private IEnumerator Alarm()
+    private void DecrementTicks()
     {
-        yield return new WaitForSeconds(_time);
-        ToGiveBonus?.Invoke();
-        StartCoroutine(Alarm());
+        _tickCount -= 1;
+
+        if (_tickCount == 0)
+        {
+            _tickCount = MAX_TICK;
+            ToSpawnBonus?.Invoke();
+        }
     }
 }
