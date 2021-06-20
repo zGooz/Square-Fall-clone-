@@ -7,7 +7,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [SerializeField] private Handler _handler;
-    [SerializeField] private readonly float _speed = 2.5f;
+    [SerializeField] private float _speed = 2.5f;
 
     private Transform _transform;
     private int _direction = 0;

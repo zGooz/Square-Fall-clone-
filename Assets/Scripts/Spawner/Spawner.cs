@@ -8,10 +8,10 @@ public class Spawner : MonoBehaviour
 {
     public event UnityAction ToGiveSquare;
 
-    public float Delay { get; set; } = 1.5f;
-
+    [SerializeField] private float _delay = 0.7f;
     [SerializeField] private Donor _donor;
     [SerializeField] private GameObject _square;
+    [SerializeField, Range(0, 2)] private float _offset;
 
     private Transform _transform;
     private GameObject _instance;
@@ -36,7 +36,7 @@ public class Spawner : MonoBehaviour
 
     private IEnumerator SpawnProcess()
     {
-        yield return new WaitForSeconds(Delay);
+        yield return new WaitForSeconds(_delay);
 
         Spawn();
         StartCoroutine(SpawnProcess());
@@ -52,7 +52,10 @@ public class Spawner : MonoBehaviour
 
     private void Spawn()
     {
-        _instance = Instantiate(_square, _transform);
+        var x = _offset * Random.Range(-1, 1);
+        var position = _transform.position + new Vector3(x, 0, 0);
+
+        _instance = Instantiate(_square, position, Quaternion.identity, _transform);
         ToGiveSquare?.Invoke();
     }
 }

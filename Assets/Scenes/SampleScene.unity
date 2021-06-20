@@ -158,10 +158,10 @@ RectTransform:
   m_Father: {fileID: 1308276787}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.6521112, y: 0.8}
-  m_AnchorMax: {x: 0.9563334, y: 0.975}
-  m_AnchoredPosition: {x: 0.5, y: 5}
-  m_SizeDelta: {x: -42.276993, y: -44.976013}
+  m_AnchorMin: {x: 0.7452223, y: 0.8443751}
+  m_AnchorMax: {x: 0.9296667, y: 0.95187503}
+  m_AnchoredPosition: {x: 1.5, y: -1.5}
+  m_SizeDelta: {x: 3, y: -3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &261475969
 MonoBehaviour:
@@ -283,10 +283,10 @@ RectTransform:
   m_Father: {fileID: 1308276787}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.29666668, y: 0.41750008}
-  m_AnchorMax: {x: 0.70411116, y: 0.65425}
-  m_AnchoredPosition: {x: 4.5, y: 0.44592285}
-  m_SizeDelta: {x: -25.867798, y: -33.3481}
+  m_AnchorMin: {x: 0.35577783, y: 0.41750008}
+  m_AnchorMax: {x: 0.63633335, y: 0.58175}
+  m_AnchoredPosition: {x: -4, y: 1}
+  m_SizeDelta: {x: 6.437401, y: 0.9374008}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &373923420
 MonoBehaviour:
@@ -564,10 +564,10 @@ RectTransform:
   m_Father: {fileID: 795658470}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.12250006}
-  m_AnchorMax: {x: 1, y: 0.3106249}
-  m_AnchoredPosition: {x: 0, y: -0.16357422}
-  m_SizeDelta: {x: 0, y: 3.3082886}
+  m_AnchorMin: {x: 0, y: 0.066875}
+  m_AnchorMax: {x: 1, y: 0.2581247}
+  m_AnchoredPosition: {x: 0, y: 2.5}
+  m_SizeDelta: {x: 0, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &609775077
 MonoBehaviour:
@@ -646,10 +646,10 @@ RectTransform:
   m_Father: {fileID: 1308276787}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.05888889, y: 0.80500007}
-  m_AnchorMax: {x: 0.35577783, y: 0.975}
-  m_AnchoredPosition: {x: 1.5, y: 1}
-  m_SizeDelta: {x: -35.276978, y: -36.976013}
+  m_AnchorMin: {x: 0.05888889, y: 0.8443751}
+  m_AnchorMax: {x: 0.25688896, y: 0.95187503}
+  m_AnchoredPosition: {x: 3, y: -1.5}
+  m_SizeDelta: {x: -9, y: -3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &778563443
 MonoBehaviour:
@@ -866,10 +866,10 @@ RectTransform:
   m_Father: {fileID: 1308276787}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.6521112, y: 0.8}
-  m_AnchorMax: {x: 0.9563334, y: 0.975}
-  m_AnchoredPosition: {x: 0.5, y: 5}
-  m_SizeDelta: {x: -42.276993, y: -44.976013}
+  m_AnchorMin: {x: 0.7452223, y: 0.8443751}
+  m_AnchorMax: {x: 0.9296667, y: 0.95187503}
+  m_AnchoredPosition: {x: 1.5, y: -1.5}
+  m_SizeDelta: {x: 3, y: -3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &864623541
 MonoBehaviour:
@@ -1032,7 +1032,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1138793016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 10}
+  m_LocalPosition: {x: 0, y: -2, z: 10}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 519420032}
@@ -1140,6 +1140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _handler: {fileID: 1856131060}
+  _speed: 5
 --- !u!114 &1138793022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1251,10 +1252,10 @@ RectTransform:
   m_Father: {fileID: 1308276787}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.3088889, y: 0.16149996}
-  m_AnchorMax: {x: 0.6896667, y: 0.388125}
-  m_AnchoredPosition: {x: 5.3338013, y: 2}
-  m_SizeDelta: {x: -1.5399933, y: -12.270004}
+  m_AnchorMin: {x: 0.3435556, y: 0.17875005}
+  m_AnchorMax: {x: 0.63633335, y: 0.34812504}
+  m_AnchoredPosition: {x: 1.5, y: 0}
+  m_SizeDelta: {x: -4.562599, y: -7.0625916}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1534964683
 MonoBehaviour:
@@ -1332,7 +1333,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1741142376}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 10, z: 10}
+  m_LocalPosition: {x: 0, y: 5.5, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 519420032}
@@ -1363,8 +1364,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1c49a3442d7ebf478a1f37c1c227e7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _delay: 0.7
   _donor: {fileID: 1122906066}
   _square: {fileID: 9221693461770610926, guid: 93a05c617a2cb6846b7f09ad9ee2f74a, type: 3}
+  _offset: 1
 --- !u!1 &1744852052
 GameObject:
   m_ObjectHideFlags: 0
