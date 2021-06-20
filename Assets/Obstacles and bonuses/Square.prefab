@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 495877438983743045}
   - component: {fileID: 8481640542128217092}
   - component: {fileID: 7269501530725654127}
+  - component: {fileID: 8707773330371263494}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -142,7 +143,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.65
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -170,5 +171,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 411de16934a08c14ba11db3b19ba3625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8707773330371263494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9221693461770610926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b1c6d626573d044ad29b662372a2e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

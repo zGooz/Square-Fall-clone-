@@ -14,7 +14,7 @@ public class Pusher : MonoBehaviour
     {
         _body = GetComponent<Rigidbody2D>();
         _directionFlow = Random.Range(-1, 2);
-        _forceValue = Random.Range(1f, 4f);
+        _forceValue = Random.Range(0.4f, 3f);
     }
 
     private void Update()

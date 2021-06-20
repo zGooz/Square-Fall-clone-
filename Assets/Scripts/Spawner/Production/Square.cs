@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Square : MonoBehaviour 
 {
-    private readonly float _lifetime = 5.0f;
+    private readonly float _lifetime = 2.0f;
 
     private void Awake()
     {
