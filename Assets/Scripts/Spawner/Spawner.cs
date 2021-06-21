@@ -8,10 +8,10 @@ public class Spawner : MonoBehaviour
 {
     public event UnityAction ToGiveSquare;
 
-    [SerializeField] private float _delay = 0.7f;
+    [SerializeField] private float _delay = 0.65f;
     [SerializeField] private Donor _donor;
     [SerializeField] private GameObject _square;
-    [SerializeField, Range(0, 1.5f)] private float _offset = 1.5f;
+    [SerializeField, Range(0, 1.2f)] private float _offset = 1.2f;
 
     private Transform _transform;
     private GameObject _instance;

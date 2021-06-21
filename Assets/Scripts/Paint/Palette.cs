@@ -22,11 +22,8 @@ public class Palette : MonoBehaviour
 
     private void MakeColor()
     {
-        var r = Random.Range(0.0f, 1.0f);
-        var g = Random.Range(0.0f, 1.0f);
-        var b = Random.Range(0.0f, 1.0f);
-
-        Color = new Color(r, g, b, 1);
+        var h = Random.Range(0.0f, 1.0f);
+        Color = Color.HSVToRGB(h, 1, 1);
         ColorSet?.Invoke();
     }
 }
