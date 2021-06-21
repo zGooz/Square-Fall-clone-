@@ -627,6 +627,8 @@ GameObject:
   - component: {fileID: 609775076}
   - component: {fileID: 609775078}
   - component: {fileID: 609775077}
+  - component: {fileID: 609775079}
+  - component: {fileID: 609775080}
   m_Layer: 5
   m_Name: Judge
   m_TagString: Untagged
@@ -695,6 +697,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 609775075}
   m_CullTransparentMesh: 1
+--- !u!114 &609775079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609775075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da57c4c9320bef04290211aef61c3068, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _keeper: {fileID: 1138793022}
+--- !u!114 &609775080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609775075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d16f70199eee544fb8efa435909c9e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &778563441
 GameObject:
   m_ObjectHideFlags: 0
