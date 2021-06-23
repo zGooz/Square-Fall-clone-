@@ -4,21 +4,22 @@ using UnityEngine.UI;
 
 
 [RequireComponent(typeof(Text))]
-[RequireComponent(typeof(Judge))]
+[RequireComponent(typeof(ScoreProvider))]
 
 public class ScoreBoard : MonoBehaviour
 {
     private Text _board;
-    private Judge _provider;
+    private ScoreProvider _provider;
 
     private void Awake()
     {
         _board = GetComponent<Text>();
-        _provider = GetComponent<Judge>();
+        _provider = GetComponent<ScoreProvider>();
     }
 
     private void OnEnable()
     {
+        UpdateResultOnScoreboard();
         _provider.NewScore += UpdateResultOnScoreboard;
     }
 

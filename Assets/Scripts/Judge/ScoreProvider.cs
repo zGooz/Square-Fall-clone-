@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 
-public class Judge : MonoBehaviour
+public class ScoreProvider : MonoBehaviour
 {
     public event UnityAction NewScore;
 
@@ -15,22 +15,25 @@ public class Judge : MonoBehaviour
     private void OnEnable()
     {
         _keeper.Keep += IncrementScore;
+        _keeper.Fail += ResetScore;
     }
 
     private void OnDisable()
     {
         _keeper.Keep -= IncrementScore;
+        _keeper.Fail -= ResetScore;
     }
 
     private void IncrementScore()
     {
         Score += 1;
+        Best = Mathf.Max(Score, Best);
+        NewScore?.Invoke();
+    }
 
-        if (Score > Best)
-        {
-            Best = Score;
-        }
-
+    private void ResetScore()
+    {
+        Score = 0;
         NewScore?.Invoke();
     }
 }

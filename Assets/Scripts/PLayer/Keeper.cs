@@ -13,15 +13,20 @@ public class Keeper : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         var other = collision.gameObject;
+        var checkBonus = other.TryGetComponent(out Bonus _);
+        var checkSquare = other.TryGetComponent(out Square _);
 
-        if (other.TryGetComponent(out Bonus _))
+        if (checkBonus)
         {
             Keep?.Invoke();
         }
 
-        if (other.TryGetComponent(out Square _))
+        if (checkSquare)
         {
-            Fail?.Invoke();
+            if (!checkBonus)
+            {
+                Fail?.Invoke();
+            }
         }
 
         Destroy(other);
