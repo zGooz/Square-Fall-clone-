@@ -761,7 +761,7 @@ GameObject:
   - component: {fileID: 531995722}
   - component: {fileID: 531995723}
   m_Layer: 0
-  m_Name: ReflectorLeft
+  m_Name: Reflector left
   m_TagString: Untagged
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -833,7 +833,7 @@ GameObject:
   - component: {fileID: 609775079}
   - component: {fileID: 609775080}
   m_Layer: 5
-  m_Name: ScoreProvider
+  m_Name: Score provider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -937,7 +937,7 @@ GameObject:
   - component: {fileID: 750750454}
   - component: {fileID: 750750455}
   m_Layer: 5
-  m_Name: TotalScoreBoard
+  m_Name: Total score board
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1013,7 +1013,7 @@ GameObject:
   - component: {fileID: 778563447}
   - component: {fileID: 778563446}
   m_Layer: 5
-  m_Name: MuteOff
+  m_Name: Mute off
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1355,7 +1355,7 @@ GameObject:
   - component: {fileID: 1122906065}
   - component: {fileID: 1122906066}
   m_Layer: 0
-  m_Name: Donor
+  m_Name: Bonus provider
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1967,7 +1967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc34c6871fc507b438d4c3efd974b54d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _donor: {fileID: 1122906066}
+  _provider: {fileID: 1122906066}
 --- !u!114 &1741142379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1981,9 +1981,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _delay: 0.5
-  _donor: {fileID: 1122906066}
+  _provider: {fileID: 1122906066}
   _square: {fileID: 9221693461770610926, guid: 93a05c617a2cb6846b7f09ad9ee2f74a, type: 3}
   _offset: 2
+  _keeper: {fileID: 1138793022}
 --- !u!1 &1744852052
 GameObject:
   m_ObjectHideFlags: 0
@@ -2064,7 +2065,7 @@ GameObject:
   - component: {fileID: 1856131062}
   - component: {fileID: 1856131061}
   m_Layer: 5
-  m_Name: PlayerHandler
+  m_Name: Player handler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2245,7 +2246,7 @@ GameObject:
   - component: {fileID: 2035931605}
   - component: {fileID: 2035931604}
   m_Layer: 5
-  m_Name: MuteOn
+  m_Name: Mute on
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2360,7 +2361,7 @@ GameObject:
   - component: {fileID: 2099882585}
   - component: {fileID: 2099882586}
   m_Layer: 0
-  m_Name: ReflectorRight
+  m_Name: Reflector right
   m_TagString: Untagged
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
