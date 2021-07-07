@@ -4,7 +4,7 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 
-public class Button : MonoBehaviour, IPointerClickHandler
+public class ClickHandler : MonoBehaviour, IPointerClickHandler
 {
     public event UnityAction Click;
 

@@ -3,16 +3,16 @@ using UnityEngine;
 using UnityEngine.Events;
 
 
-[RequireComponent(typeof(Button))]
+[RequireComponent(typeof(ClickHandler))]
 
-public class Handler : MonoBehaviour
+public class PlayerMoveHandler : MonoBehaviour
 {
-    private Button _panel;
+    private ClickHandler _panel;
     public event UnityAction Reverce;
 
     private void Awake()
     {
-        _panel = GetComponent<Button>();
+        _panel = GetComponent<ClickHandler>();
     }
 
     private void OnEnable()

@@ -3,17 +3,17 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(ActivationAndDeactivationManager))]
-[RequireComponent(typeof(Button))]
+[RequireComponent(typeof(ClickHandler))]
 
 public class ResponsiveToClick : MonoBehaviour
 {
     private ActivationAndDeactivationManager _manager;
-    private Button _button;
+    private ClickHandler _button;
 
     private void Awake()
     {
         _manager = GetComponent<ActivationAndDeactivationManager>();
-        _button = GetComponent<Button>();
+        _button = GetComponent<ClickHandler>();
     }
 
     private void OnEnable()
