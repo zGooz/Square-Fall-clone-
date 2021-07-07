@@ -8,22 +8,22 @@ using UnityEngine;
 public class ResponsiveToClick : MonoBehaviour
 {
     private ActivationAndDeactivationManager _manager;
-    private ClickHandler _button;
+    private ClickHandler _clickHandler;
 
     private void Awake()
     {
         _manager = GetComponent<ActivationAndDeactivationManager>();
-        _button = GetComponent<ClickHandler>();
+        _clickHandler = GetComponent<ClickHandler>();
     }
 
     private void OnEnable()
     {
-        _button.Click += ToClick;
+        _clickHandler.Click += ToClick;
     }
 
     private void OnDisable()
     {
-        _button.Click -= ToClick;
+        _clickHandler.Click -= ToClick;
     }
 
     private void ToClick()

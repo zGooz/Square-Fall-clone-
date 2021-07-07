@@ -1,18 +1,35 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
+
+
+[RequireComponent(typeof(Keeper))]
 
 public class PlayerParticleSpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private GameObject _particlePrefab;
+
+    private Keeper _keeper;
+    private Transform _transform;
+
+    private void Awake()
     {
-        
+        _keeper = GetComponent<Keeper>();
+        _transform = GetComponent<Transform>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        
+        _keeper.SpawnParticleOfLoser += OnSpawnParticleOfLoser;
+    }
+
+    private void OnDisable()
+    {
+        _keeper.SpawnParticleOfLoser -= OnSpawnParticleOfLoser;
+    }
+
+    private void OnSpawnParticleOfLoser()
+    {
+        Instantiate(_particlePrefab, _transform.position, Quaternion.identity);
     }
 }

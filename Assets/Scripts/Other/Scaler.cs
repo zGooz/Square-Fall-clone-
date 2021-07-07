@@ -5,15 +5,15 @@ using DG.Tweening;
 
 public class Scaler : MonoBehaviour
 {
-    [SerializeField] float _duration;
+    [SerializeField] private float _duration;
 
     private void Awake()
     {
         var form = GetComponent<Transform>();
-        var currentScale = form.localScale;
         var sequence = DOTween.Sequence();
+        var startScale = form.localScale;
 
         form.localScale = Vector2.zero;
-        sequence.Append(form.DOScale(currentScale, _duration));
+        sequence.Append(form.DOScale(startScale, _duration));
     }
 }

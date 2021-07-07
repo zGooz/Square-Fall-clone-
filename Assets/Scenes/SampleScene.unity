@@ -1388,7 +1388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawner: {fileID: 1741142379}
-  _tickCount: 5
+  _tickCount: 3
 --- !u!1 &1138793016
 GameObject:
   m_ObjectHideFlags: 0
@@ -1406,6 +1406,7 @@ GameObject:
   - component: {fileID: 1138793023}
   - component: {fileID: 1138793024}
   - component: {fileID: 1138793025}
+  - component: {fileID: 1138793026}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1542,6 +1543,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 280fbb611ef57104887a1dcd2f420e69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _scaleFactor: 1.3
+  _duration: 0.1
 --- !u!114 &1138793023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1580,6 +1583,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _duration: 1
+--- !u!114 &1138793026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138793016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f317571f4617fdd4692a031fdd613a94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _particlePrefab: {fileID: 2546779424847949265, guid: 37fb8c3e9f89f97459eaa1ce4e69a256, type: 3}
 --- !u!1 &1159697405
 GameObject:
   m_ObjectHideFlags: 0
