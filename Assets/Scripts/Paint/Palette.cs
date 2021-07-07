@@ -8,16 +8,16 @@ public class Palette : MonoBehaviour
     public Color Color { get; private set; } = Color.white;
     public event UnityAction ColorSet;
 
-    [SerializeField] private Donor _donor;
+    [SerializeField] private BonusProvider _provider;
 
     private void OnEnable()
     {
-        _donor.ToSpawnBonus += MakeColor;
+        _provider.ToSpawnBonus += MakeColor;
     }
 
     private void OnDisable()
     {
-        _donor.ToSpawnBonus -= MakeColor;
+        _provider.ToSpawnBonus -= MakeColor;
     }
 
     private void MakeColor()

@@ -9,9 +9,10 @@ public class Spawner : MonoBehaviour
     public event UnityAction ToGiveSquare;
 
     [SerializeField] private float _delay = 0.65f;
-    [SerializeField] private Donor _donor;
+    [SerializeField] private BonusProvider _provider;
     [SerializeField] private GameObject _square;
-    [SerializeField, Range(0, 1.2f)] private float _offset = 1.2f;
+    [SerializeField, Range(0, 0.8f)] private float _offset = 0.8f;
+    [SerializeField] private Keeper _keeper;
 
     private Transform _transform;
     private GameObject _instance;
@@ -25,13 +26,27 @@ public class Spawner : MonoBehaviour
     {
         StopCoroutine(SpawnProcess());
         StartCoroutine(SpawnProcess());
-        _donor.ToSpawnBonus += CreateBonus;
+        _provider.ToSpawnBonus += CreateBonus;
+        _keeper.Fail += Clear;
     }
 
     private void OnDisable()
     {
         StopCoroutine(SpawnProcess());
-        _donor.ToSpawnBonus -= CreateBonus;
+        _provider.ToSpawnBonus -= CreateBonus;
+        _keeper.Fail -= Clear;
+    }
+
+    private void Clear()
+    {
+        var squares = GameObject.FindObjectsOfType<Square>();
+
+        foreach (var square in squares)
+        {
+            Destroy(square.gameObject);
+        }
+
+        StopCoroutine(SpawnProcess());
     }
 
     private IEnumerator SpawnProcess()

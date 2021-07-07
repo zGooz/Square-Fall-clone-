@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 
-public class Donor : MonoBehaviour 
+public class BonusProvider : MonoBehaviour 
 {
     public event UnityAction ToSpawnBonus;
 
