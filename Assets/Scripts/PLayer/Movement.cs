@@ -23,14 +23,14 @@ public class Movement : MonoBehaviour
 
     private void OnEnable()
     {
-        _handler.Reverce += OnRunOrReverce;
-        _keeper.Fail += OnStopMovement;
+        _handler.Reverce += OnReverceDirection;
+        _keeper.MakeStop += OnStopMovement;
     }
 
     private void OnDisable()
     {
-        _handler.Reverce -= OnRunOrReverce;
-        _keeper.Fail -= OnStopMovement;
+        _handler.Reverce -= OnReverceDirection;
+        _keeper.MakeStop -= OnStopMovement;
     }
 
     private void Update()
@@ -49,14 +49,19 @@ public class Movement : MonoBehaviour
         }
     }
 
+    private void OnRun()
+    {
+        _direction = 1;
+    }
+
     private void OnStopMovement()
     {
         _direction = 0;
         _transform.position = _startPosition;
     }
 
-    private void OnRunOrReverce()
+    private void OnReverceDirection()
     {
-        _direction = (_direction == 0) ? 1 : -_direction;
+        _direction = -_direction;
     }
 }

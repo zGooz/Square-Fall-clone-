@@ -27,14 +27,14 @@ public class Spawner : MonoBehaviour
         StopCoroutine(SpawnProcess());
         StartCoroutine(SpawnProcess());
         _provider.ToSpawnBonus += CreateBonus;
-        _keeper.Fail += Clear;
+        _keeper.FaceObstacle += Clear;
     }
 
     private void OnDisable()
     {
         StopCoroutine(SpawnProcess());
         _provider.ToSpawnBonus -= CreateBonus;
-        _keeper.Fail -= Clear;
+        _keeper.FaceObstacle -= Clear;
     }
 
     private void Clear()

@@ -14,14 +14,14 @@ public class ScoreProvider : MonoBehaviour
 
     private void OnEnable()
     {
-        _keeper.Keep += IncrementScore;
-        _keeper.Fail += ResetScore;
+        _keeper.PickUpBonus += IncrementScore;
+        _keeper.FaceObstacle += ResetScore;
     }
 
     private void OnDisable()
     {
-        _keeper.Keep -= IncrementScore;
-        _keeper.Fail -= ResetScore;
+        _keeper.PickUpBonus -= IncrementScore;
+        _keeper.FaceObstacle -= ResetScore;
     }
 
     private void IncrementScore()

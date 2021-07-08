@@ -2,33 +2,33 @@
 using UnityEngine;
 
 
-[RequireComponent(typeof(ActivationAndDeactivationManager))]
+[RequireComponent(typeof(ActivationHandler))]
 
 public class TotalScoreBoard : MonoBehaviour
 {
     [SerializeField] private Keeper _keeper;
     [SerializeField] private Dock _dock;
 
-    private ActivationAndDeactivationManager _manager;
+    private ActivationHandler _activationHandler;
 
     private void Awake()
     {
-        _manager = GetComponent<ActivationAndDeactivationManager>();
+        _activationHandler = GetComponent<ActivationHandler>();
     }
 
     private void OnEnable()
     {
-        _keeper.Fail += DoneGameSession;
+        _keeper.FaceObstacle += DoneGameSession;
     }
 
     private void OnDisable()
     {
-        _keeper.Fail -= DoneGameSession;
+        _keeper.FaceObstacle -= DoneGameSession;
     }
 
     private void DoneGameSession()
     {
-        _manager.DeactivateObjects();
+        _activationHandler.DeactivateObjects();
         _dock.gameObject.SetActive(true);
     }
 }

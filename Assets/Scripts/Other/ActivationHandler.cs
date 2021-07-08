@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class ActivationAndDeactivationManager : MonoBehaviour
+public class ActivationHandler : MonoBehaviour
 {
     [SerializeField]
     private List<GameObject> _objectsToActivate = new List<GameObject>();

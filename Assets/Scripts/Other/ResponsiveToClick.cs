@@ -2,17 +2,17 @@
 using UnityEngine;
 
 
-[RequireComponent(typeof(ActivationAndDeactivationManager))]
+[RequireComponent(typeof(ActivationHandler))]
 [RequireComponent(typeof(ClickHandler))]
 
 public class ResponsiveToClick : MonoBehaviour
 {
-    private ActivationAndDeactivationManager _manager;
+    private ActivationHandler _anctivationHandler;
     private ClickHandler _clickHandler;
 
     private void Awake()
     {
-        _manager = GetComponent<ActivationAndDeactivationManager>();
+        _anctivationHandler = GetComponent<ActivationHandler>();
         _clickHandler = GetComponent<ClickHandler>();
     }
 
@@ -28,7 +28,7 @@ public class ResponsiveToClick : MonoBehaviour
 
     private void ToClick()
     {
-        _manager.ActivateObjects();
-        _manager.DeactivateObjects();
+        _anctivationHandler.ActivateObjects();
+        _anctivationHandler.DeactivateObjects();
     }
 }

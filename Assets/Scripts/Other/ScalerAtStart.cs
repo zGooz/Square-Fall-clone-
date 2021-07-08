@@ -3,11 +3,11 @@ using UnityEngine;
 using DG.Tweening;
 
 
-public class Scaler : MonoBehaviour
+public class ScalerAtStart : MonoBehaviour
 {
     [SerializeField] private float _duration;
 
-    private void Awake()
+    private void Start()
     {
         var form = GetComponent<Transform>();
         var sequence = DOTween.Sequence();
