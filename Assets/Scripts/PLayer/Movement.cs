@@ -9,6 +9,8 @@ public class Movement : MonoBehaviour
     [SerializeField] private PlayerMoveHandler _handler;
     [SerializeField] private float _speed = 2.5f;
 
+    private bool IsFirstRun { get; set; } = true;
+
     private Transform _transform;
     private int _direction = 0;
     private Keeper _keeper;
@@ -23,6 +25,8 @@ public class Movement : MonoBehaviour
 
     private void OnEnable()
     {
+        IsFirstRun = true;
+
         _handler.Reverce += OnReverceDirection;
         _keeper.MakeStop += OnStopMovement;
     }
@@ -49,9 +53,10 @@ public class Movement : MonoBehaviour
         }
     }
 
-    private void OnRun()
+    private void Run()
     {
-        _direction = 1;
+        _direction = -1;
+        IsFirstRun = false;
     }
 
     private void OnStopMovement()
@@ -62,6 +67,11 @@ public class Movement : MonoBehaviour
 
     private void OnReverceDirection()
     {
+        if (IsFirstRun)
+        {
+            Run();
+        }
+
         _direction = -_direction;
     }
 }
