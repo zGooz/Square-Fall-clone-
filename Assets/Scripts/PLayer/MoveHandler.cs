@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 [RequireComponent(typeof(ClickHandler))]
 
-public class PlayerMoveHandler : MonoBehaviour
+public class MoveHandler : MonoBehaviour
 {
     private ClickHandler _panel;
     public event UnityAction Reverce;

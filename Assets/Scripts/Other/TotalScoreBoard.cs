@@ -18,12 +18,12 @@ public class TotalScoreBoard : MonoBehaviour
 
     private void OnEnable()
     {
-        _keeper.FaceObstacle += DoneGameSession;
+        _keeper.FaceObstacleComplete += DoneGameSession;
     }
 
     private void OnDisable()
     {
-        _keeper.FaceObstacle -= DoneGameSession;
+        _keeper.FaceObstacleComplete -= DoneGameSession;
     }
 
     private void DoneGameSession()

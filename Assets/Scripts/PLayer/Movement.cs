@@ -1,12 +1,15 @@
 
 using UnityEngine;
+using UnityEngine.Events;
 
 
 [RequireComponent(typeof(Keeper))]
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField] private PlayerMoveHandler _handler;
+    public event UnityAction CollideReflector;
+
+    [SerializeField] private MoveHandler _handler;
     [SerializeField] private float _speed = 2.5f;
 
     private bool IsFirstRun { get; set; } = true;
@@ -50,12 +53,13 @@ public class Movement : MonoBehaviour
         if (other.TryGetComponent(out Reflector _))
         {
             _direction *= -1;
+            CollideReflector?.Invoke();
         }
     }
 
     private void Run()
     {
-        _direction = -1;
+        _direction = 1;
         IsFirstRun = false;
     }
 
@@ -71,7 +75,9 @@ public class Movement : MonoBehaviour
         {
             Run();
         }
-
-        _direction = -_direction;
+        else
+        {
+            _direction = -_direction;
+        }
     }
 }

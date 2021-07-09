@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Keeper))]
 
-public class PlayerParticleSpawner : MonoBehaviour
+public class ParticleSpawner : MonoBehaviour
 {
     [SerializeField]
     private GameObject _particlePrefab;

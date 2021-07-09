@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Rotator : MonoBehaviour
 {
+    [SerializeField] private float _angularVelocity = 1.5f;
+
     private Transform _transform;
-    private float _angularVelocity = 1f;
 
     private void Awake()
     {

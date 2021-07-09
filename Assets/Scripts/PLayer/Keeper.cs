@@ -8,9 +8,11 @@ using DG.Tweening;
 
 public class Keeper : MonoBehaviour
 {
-    public event UnityAction PickUpBonus;
+    public event UnityAction PickUpBonusComplete;
+    public event UnityAction PickUpBonusStart;
     public event UnityAction SpawnParticleOfLoser;
-    public event UnityAction FaceObstacle;
+    public event UnityAction FaceObstacleComplete;
+    public event UnityAction FaceObstacleStart;
     public event UnityAction MakeStop;
 
     private bool IsCollisionHandled { get; set; } = true;
@@ -44,18 +46,22 @@ public class Keeper : MonoBehaviour
 
         if (checkBonus)
         {
+            PickUpBonusStart?.Invoke();
+
             playerSequence.Append(_transform.DOScale(_startScale * _scaleFactor, _duration))
                 .AppendInterval(_interval)
                 .Join(_transform.DOScale(_startScale, _duration))
                 .AppendInterval(_interval)
-                .AppendCallback(() => PickUpBonus?.Invoke());
+                .AppendCallback(() => PickUpBonusComplete?.Invoke());
         }
         else if (checkSquare)
         {
+            FaceObstacleStart?.Invoke();
+
             playerSequence.AppendCallback(() => SpawnParticleOfLoser?.Invoke())
                 .AppendCallback(() => MakeStop?.Invoke())
                 .AppendInterval(_interval)
-                .AppendCallback(() => FaceObstacle?.Invoke());
+                .AppendCallback(() => FaceObstacleComplete?.Invoke());
         }
 
         playerSequence.AppendCallback(() => IsCollisionHandled = true);
