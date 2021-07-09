@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using DG.Tweening;
 
 
 [RequireComponent(typeof(ActivationHandler))]
@@ -7,6 +8,8 @@ using UnityEngine;
 
 public class ResponsiveToClick : MonoBehaviour
 {
+    [SerializeField] private float _interval = 1f;
+
     private ActivationHandler _anctivationHandler;
     private ClickHandler _clickHandler;
 
@@ -28,7 +31,10 @@ public class ResponsiveToClick : MonoBehaviour
 
     private void ToClick()
     {
-        _anctivationHandler.ActivateObjects();
-        _anctivationHandler.DeactivateObjects();
+        var sequance = DOTween.Sequence();
+
+        sequance.AppendInterval(_interval)
+            .AppendCallback(() => _anctivationHandler.ActivateObjects())
+            .AppendCallback(() => _anctivationHandler.DeactivateObjects());
     }
 }
